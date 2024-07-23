@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="inner">
+            <div class="color">
+                <p>Background-color :   <span id="textcolor"></span></p>
+            </div>
+            <div class="button">
+                <button onclick="change(this)">Click Here</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        let list = ['#E6B9A6','#939185','#2F3645'];
+        let list_name = ['Peach','Sage','Black'];
+        var i = 0;
+        function change(button) {
+            if(i >= list.length)
+        {
+            i = 0;
+        }
+            document.getElementsByClassName("container")[0].style.backgroundColor = list[i];
+            document.getElementById("textcolor").innerText = list_name[i];
+            document.getElementsByClassName('color')[0].style.color = 'white';
+            i = i +1 ;
+        }
+    </script>
+</body>
+</html>
